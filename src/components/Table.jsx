@@ -55,13 +55,12 @@ const Row = ({ data, level = 0 }) => {
 
 const Table = () => {
   return (
-    <div className='p-10  h-full bg-gradient-to-b from-white to-gray-500'>
-      <h1 class="text-3xl text-center font-bold text-purple-700 mt-8 mb-4 bg-purple-300 bg-opacity-25 backdrop-blur-md p-4 rounded-lg shadow-lg">
+    <div className='p-10 h-screen bg-gradient-to-b from-white to-gray-500 flex flex-col'>
+      <h1 className="text-3xl text-center font-bold text-purple-700 mt-8 mb-4 bg-purple-300 bg-opacity-25 backdrop-blur-md p-4 rounded-lg shadow-lg">
         TABLE DATA
       </h1>
 
-
-      <div className="flex flex-col">
+      <div className="flex flex-col flex-1">
         <div className="mb-2">
           <div className="px-4 py-4 flex font-bold text-left bg-gray-400 border-b border-gray-200 rounded-xl">
             <div className="flex-grow font-bold text-2xl">ID</div>
@@ -69,8 +68,8 @@ const Table = () => {
             <div className="flex-grow font-bold text-2xl">Text 2</div>
           </div>
         </div>
-        <div className="flex flex-col">
-          {jsonData.rows.map(row => (
+        <div className="flex flex-col flex-1 overflow-y-auto">
+          {jsonData.rows.map((row) => (
             <Row key={row.id} data={row} />
           ))}
         </div>
