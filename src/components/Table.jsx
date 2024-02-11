@@ -1,3 +1,16 @@
+// Define Row Component
+// Handle Row Click
+// Toggle Expand
+// Render Row Component
+// Render Child Rows
+// Define Table Component
+// Render Header
+// Render Table Content
+// Render Rows
+// Export Table Component
+// Exported the Table component as the default export
+
+
 import React, { useState } from 'react';
 import jsonData from '../data.json';
 
